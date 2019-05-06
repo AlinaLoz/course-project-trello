@@ -2,8 +2,9 @@ const Sequelize = require('sequelize');
 const conf = require('../config/db');
 const UserModel = require('../models/mysql/user').User;
 const TeamModel = require('../models/mysql/team');
-const BoardModel = require('../models/mysql/board');
-// const TokenModel = require('../models/mysql/token');
+const BoardModel = require('../models/mysql/board').Board;
+const ListModel = require('../models/mysql/list');
+const TaskModel = require('../models/mysql/task');
 
 const sequelize = new Sequelize(conf.database, conf.user, conf.password, {
 	host: "127.0.0.1",
@@ -17,7 +18,8 @@ const sequelize = new Sequelize(conf.database, conf.user, conf.password, {
 const User = UserModel(sequelize, Sequelize);
 const Team = TeamModel(sequelize, Sequelize);
 const Board = BoardModel(sequelize, Sequelize);
-// const Token = TokenModel(sequelize, Sequelize);
+const List = ListModel(sequelize, Sequelize);
+const Task = TaskModel(sequelize, Sequelize);
 
 User.belongsToMany(Team, {through: 'userteam' });
 Team.belongsToMany(User, {through: 'userteam' });
@@ -27,8 +29,11 @@ Team.hasMany(Board);
 Board.belongsTo(User);
 Board.belongsTo(Team);
 
-// User.hasOne(Token);
-// Token.belongsTo(User);
+List.belongsTo(Board);
+Board.hasMany(List);
+
+List.hasMany(Task);
+Task.belongsTo(List);
 
 sequelize.sync()
 	.then(() => {
@@ -38,6 +43,7 @@ sequelize.sync()
 module.exports = {
 	User,
 	Team,
-	Board
+	Board,
+	List
 };
 

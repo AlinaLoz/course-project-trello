@@ -6,6 +6,22 @@
   height: 95vh;
   flex-wrap: nowrap !important;
 
+  &.board-create {
+    .board-name {
+      margin-bottom: 10px;
+    }
+
+    .checkbox {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .dropdown {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+  }
+
   &.team-change {
     .button-save {
       margin-left: 1rem !important;
@@ -97,5 +113,56 @@
   .message {
     width: 400px !important;
     margin-left: 10px;
+  }
+
+  &.one-board {
+    .icon.content-button {
+      right: 20px;
+    }
+
+    .ui.styled.accordion {
+      width: 100%;
+    }
+
+    .one-board__list {
+      padding-top: 20px;
+      max-height: 320px;
+      overflow-y: scroll;
+    }
+
+    .one-board__add-list {
+      margin-top: 20px;
+
+      .input.icon {
+        position: relative;
+        width: auto;
+      }
+
+      .icon.save {
+        position: absolute;
+        right: 0;
+        top: 0;
+        opacity: 1;
+        pointer-events: auto !important;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .button-add {
+      min-height: 35px;
+      white-space: nowrap;
+      margin-left: 15px !important;
+      width: 200px !important;
+    }
+  }
+
+  .list-tasks {
+    display: flex;
+    width: auto;
+    overflow-x: scroll;
+    overflow-y: hidden !important;
   }
 }

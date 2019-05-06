@@ -1,18 +1,20 @@
 import React from 'react';
-import {Route, Switch, withRouter} from "react-router-dom";
-import Login from "./Login";
-import Register from "./Register";
-import {connect} from "react-redux";
-import Navbar from "./Sidebar";
-import Profile from "./Profile";
-import Team from "./TeamChange";
-import ListTeams from "./ListTeams";
-import ListBoards from "./ListBoards";
-import Board from "./Board";
-import {fetchAuth} from "../redux/auth/actions";
-import {TeamCreate} from "./TeamCreate";
 
-class HomePage extends React.Component {
+import {Route, Switch, withRouter} from "react-router-dom";
+import Login from "./containers/Login/Login";
+import Register from "./containers/Register/Register";
+import {connect} from "react-redux";
+import Navbar from "./components/Sidebar";
+import Profile from "./containers/UserInfo/Profile";
+import Team from "./containers/Team/TeamChange";
+import ListTeams from "./containers/Team/ListTeams";
+import ListBoards from "./containers/Board/ListBoards";
+import BoardCreate from "./containers/Board/BoardCreate";
+import {fetchAuth} from "./redux/auth/actions";
+import {TeamCreate} from "./containers/Team/TeamCreate";
+import Board from "./containers/Board/Board";
+
+class RoutePage extends React.Component {
 	intervalAuth = null;
 
 	componentWillMount() {
@@ -31,16 +33,20 @@ class HomePage extends React.Component {
 					<Route path='/register' component={Register}/>
 					{!auth && <Route component={Login}/>}
 					<Route path={'/profile'} component={Profile} />
+
 					<Route path={'/team/change'} component={TeamCreate}/>
 					<Route path={'/team/:id'} component={Team}/>
 					<Route path={'/team'} component={ListTeams} />
+
 					<Route path={'/board/:id'} component={Board}/>
-					<Route path={'/board'} component={ListBoards}/>
+					<Route path={'/boards'} component={ListBoards}/>
+					<Route path={'/board-create'} component={BoardCreate}/>
 				</Switch>
 			</React.Fragment>
 		)
 	}
 }
+
 
 export default withRouter(
 	connect(
@@ -50,7 +56,7 @@ export default withRouter(
 		dispatch => ({
 			onfetchAuth: () => dispatch(fetchAuth())
 		})
-	)(HomePage)
+	)(RoutePage)
 );
 
 

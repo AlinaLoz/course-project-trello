@@ -1,4 +1,4 @@
-import {Xhr} from "../../helpers/Xhr";
+import {Xhr} from "../../services/Xhr";
 import {ACTIONS} from "../constans";
 
 export const getTeams = () => dispatch => {

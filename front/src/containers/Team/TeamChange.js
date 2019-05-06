@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {dropMessage, getOneTeam, updateName} from "../redux/teams/actions";
+import {dropMessage, getOneTeam, updateName} from "../../redux/teams/actions";
 import {Button, Grid, Header, Input, List, Message} from "semantic-ui-react";
+import {Link} from "react-router-dom";
 
 class TeamChange extends Component {
     state = {
@@ -27,7 +28,11 @@ class TeamChange extends Component {
                 <Input  onChange={(e) => this.setState({name:e.target.value})}/>
                 <Header>Участники:</Header>
                 <List>
-                    {team && team.users.map((user, index) => <List.Item key={index}>{user.login}</List.Item>)}
+                    {team && team.users.map((user, index) => <List.Item key={index}>{index + 1}.{user.login}</List.Item>)}
+                </List>
+                <Header>Доски:</Header>
+                <List>
+                  {team && team.boards.map((board, index) => <List.Item key={index}>{index + 1}.<Link to={`/board/${board.id}`}>{board.name}</Link></List.Item>)}
                 </List>
                 <Button className={`button-save`} onClick={() => onupdateName(team.id, this.state.name)}>Сохранить</Button>
             </Grid>
@@ -38,6 +43,7 @@ class TeamChange extends Component {
 export default connect(
     (state, props) => ({
         team     : state.teams.infoTeams[props.match.params.id],
+
         message  : state.teams.messageOfCreate,
     }),
     dispatch => ({

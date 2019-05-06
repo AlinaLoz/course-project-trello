@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {Button, Checkbox, Form, Grid, Header, Icon, Input, Label, List, Loader, Message} from "semantic-ui-react";
-import {checkExistUser, createTeam, dropMessage} from "../redux/teams/actions";
+import {checkExistUser, createTeam, dropMessage} from "../../redux/teams/actions";
 
 class TeamChangeComponent extends Component {
     state = {

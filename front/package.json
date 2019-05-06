@@ -1,38 +1,154 @@
 {
-  "name": "trello",
+  "name": "gitometer",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.33",
+    "@electron-forge/maker-deb": "^6.0.0-beta.33",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.33",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.33",
+    "@electron-forge/maker-zip": "^6.0.0-beta.33",
+    "electron": "5.0.0",
+    "foreman": "^3.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0",
-    "electron": "^5.0.0"
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "1.0.11",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-react": "^0.86.0"
   },
+  "homepage": "./",
+  "main": "main.js",
   "scripts": {
-    "start": "nf start -p 3000",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
     "electron": "electron .",
-    "electron-start": "node src/start-react",
-    "react-start": "BROWSER=none react-scripts start",
-    "pack": "build --dir",
-    "dist": "npm run build && build",
-    "postinstall": "install-app-deps"
+    "package-win": "yarn build && electron-builder build --win --x64 --publish never",
+    "electron-start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make --all",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "electron-dev": "set ELECTRON_START_URL=http://localhost:5000 && electron .",
+    "dev": "set ELECTRON_START_URL=http://localhost:5000 && nf start"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "npm"
+      },
+      "electronWinstallerConfig": {
+        "name": "ng-example"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "ngExample"
+      }
+    }
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+  "build": {
+    "productName": "BlipWallet",
+    "appId": "org.develar.BlipWallet",
+    "files": [
+      "app/dist/",
+      "app/app.html",
+      "app/main.prod.js",
+      "app/main.prod.js.map",
+      "package.json"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "msi"
+      ]
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "rpm",
+        "snap",
+        "AppImage"
+      ],
+      "category": "Development"
+    },
+    "directories": {
+      "buildResources": "resources",
+      "output": "release"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/echoprotocol/blip-wallet.git"
+  },
+  "author": {
+    "name": "PixelPlex",
+    "email": "info@pixelplex.io",
+    "url": "https://pixelplex.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/echoprotocol/blip-wallet/issues"
+  },
+  "keywords": [
+    "blip",
+    "wallet",
+    "echo"
+  ],
+  "jest": {
+    "testURL": "http://localhost/",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/fileMock.js",
+      "\\.(css|less|sass|scss)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "setupFiles": [
+      "./internals/scripts/CheckBuiltsExist.js"
     ]
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "redux-devtools-extension": "^2.13.8",
+    "semantic-ui-css": "^2.4.1"
   }
 }

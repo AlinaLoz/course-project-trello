@@ -1,7 +1,6 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require('bcrypt');
 const conf = require('../../config/config');
-const AuthUser = require('../mongo/user');
 
 exports.User = (sequelize, type) => {
 	const User = sequelize.define('user', {
@@ -16,47 +15,46 @@ exports.User = (sequelize, type) => {
 	});
 
 	User.register = function(login, password, confirmPassword) {
-		return new Promise(function (resolve, reject) {
-			User.findOne({where: {login}}).then((user) => {
+		return new Promise(async function (resolve, reject) {
+			try {
+				const user = await User.findOne({where: {login}});
 				if (user) {
 					return reject(new UserExistError("user with this login is exist"));
 				} else {
 					if (password !== confirmPassword) {
-						return reject(new ConfirmPasswordError("password and confirm password are not equal"));
+						throw new ConfirmPasswordError("password and confirm password are not equal");
 					}
 
-					var hashedPassword = bcrypt.hashSync(password, 8);
+					const hashedPassword = bcrypt.hashSync(password, 8);
 
 					User.create({login, password: hashedPassword})
 						.then(user => resolve())
-						.catch(err => {reject(new InteractionDBError("There was a problem registering the user"))});
+						.catch(() => {
+							throw new InteractionDBError("There was a problem registering the user")
+						});
 				}
-			});
+			} catch(err) {
+				return reject(err)
+			}
 		});
 	};
 
 	User.login = function(login, password) {
-		return new Promise((resolve, reject) => {
-			User.findOne({where: {login}})
-				.then(user => {
-					if (!user) return reject(new UserNotExistError("user is not exist"));
+		return new Promise(async (resolve, reject) => {
+			try{
+				const user = await User.findOne({where: {login}});
+				if (!user) return reject(new UserNotExistError("user is not exist"));
 
-					const passwordIsValid = bcrypt.compareSync(password, user.password);
+				const passwordIsValid = bcrypt.compareSync(password, user.password);
 
-					if (!passwordIsValid) return reject(new ConfirmPasswordError("password is wrong"));
-					//resp.status(401).send({ auth: false, token: null });
+				if (!passwordIsValid) return reject(new ConfirmPasswordError("password is wrong"));
 
-					const token = jwt.sign({ id: user.id }, conf.token.secret, {expiresIn: conf.token.tokenLife});
-					const refreshToken = jwt.sign({ id: user.id }, conf.token.refreshSecret, {expiresIn: conf.token.refreshTokenLife});
+				const token = jwt.sign({id: user.id}, conf.token.secret, {expiresIn: conf.token.tokenLife});
+				const refreshToken = jwt.sign({id: user.id}, conf.token.refreshSecret, {expiresIn: conf.token.refreshTokenLife});
 
-					const authUser = new AuthUser({token, refreshToken});
-
-					authUser.save(function(err){
-						// this.disconnect();
-						if(err) return console.log(err);
-					});
-					return resolve({ auth: true, token: token, refreshToken: refreshToken});
-			});
+				return resolve({auth: true, token: token, refreshToken: refreshToken});
+			}
+			catch(err) {}
 		});
 	};
 

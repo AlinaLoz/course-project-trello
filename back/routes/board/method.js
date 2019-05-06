@@ -26,7 +26,7 @@ exports.getBoardById = async function (req, resp) {
         resp.send(200, {boards: [{id, name, ownerIsTeam, teamId, userId, lists}]})
     } catch(err) {
         console.log(err);
-        return resp.status(500).end({messages: err});
+        return resp.status(500).end({messages: err.message});
     }
 };
 

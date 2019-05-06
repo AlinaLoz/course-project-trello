@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {Button, Grid, Header, Icon, Image, List, Message} from "semantic-ui-react";
-import {dropMessage, dropTeam, getTeams} from "../redux/teams/actions";
+import {dropMessage, dropTeam, getTeams} from "../../redux/teams/actions";
 
 class ListTeams extends Component{
     componentWillMount() {

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {Button, Input, Grid, Message, Icon} from "semantic-ui-react";
-import {fetchRegister} from "../redux/register/actions";
+import {fetchRegister} from "../../redux/register/actions";
 
 class Register extends Component {
 	state = {
@@ -26,7 +26,7 @@ class Register extends Component {
 	componentWillReceiveProps(nextProps) {
 		const {message} = nextProps;
 		if (this.props.message !== message && !message.negative) {
-			this.props.history.push('/auth');
+			this.props.history.push('/user');
 		}
 	}
 

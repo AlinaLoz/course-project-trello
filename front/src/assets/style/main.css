@@ -42,6 +42,14 @@
   flex-direction: column !important;
   height: 95vh;
   flex-wrap: nowrap !important; }
+  .grid.board-create .board-name {
+    margin-bottom: 10px; }
+  .grid.board-create .checkbox {
+    display: block;
+    margin-bottom: 10px; }
+  .grid.board-create .dropdown {
+    width: 200px;
+    margin-bottom: 10px; }
   .grid.team-change .button-save {
     margin-left: 1rem !important;
     margin-top: 0 !important; }
@@ -100,24 +108,57 @@
   .grid .message {
     width: 400px !important;
     margin-left: 10px; }
+  .grid.one-board .icon.content-button {
+    right: 20px; }
+  .grid.one-board .ui.styled.accordion {
+    width: 100%; }
+  .grid.one-board .one-board__list {
+    padding-top: 20px;
+    max-height: 320px;
+    overflow-y: scroll; }
+  .grid.one-board .one-board__add-list {
+    margin-top: 20px; }
+    .grid.one-board .one-board__add-list .input.icon {
+      position: relative;
+      width: auto; }
+    .grid.one-board .one-board__add-list .icon.save {
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: 1;
+      pointer-events: auto !important; }
+      .grid.one-board .one-board__add-list .icon.save:hover {
+        cursor: pointer; }
+  .grid.one-board .button-add {
+    min-height: 35px;
+    white-space: nowrap;
+    margin-left: 15px !important;
+    width: 200px !important; }
+  .grid .list-tasks {
+    display: flex;
+    width: auto;
+    overflow-x: scroll;
+    overflow-y: hidden !important; }
 
-.list-teams {
+.list {
   width: 100% !important; }
-  .list-teams .item {
+  .list .item {
     position: relative;
     width: 400px !important;
     border-bottom: 1px solid rgba(34, 36, 38, 0.15) !important;
     padding-bottom: 10px !important; }
-  .list-teams .content .header {
-    font-size: 19px !important;
-    font-weight: 500; }
-  .list-teams .content-button {
+  .list .content {
+    padding: 0 14px; }
+    .list .content .header {
+      font-size: 19px !important;
+      font-weight: 500; }
+  .list .button-add {
+    margin-top: 20px; }
+  .list .content-button {
     position: absolute;
     right: 0;
     padding: 0;
     top: 5px; }
-  .list-teams .button-add {
-    margin-top: 20px; }
 
 .button-show-team {
   padding: 4px 15px !important;
@@ -129,7 +170,8 @@
 .button-add {
   width: 105px !important;
   padding: 10px 5px !important;
-  margin-top: 20px !important; }
+  margin-top: 20px !important;
+  margin-left: 20px !important; }
 .button-save {
   width: 150px !important; }
 .button-register {
@@ -141,6 +183,32 @@
 .input {
   width: 250px;
   height: 30px; }
+
+.modal .content {
+  display: flex;
+  flex-direction: column; }
+  .modal .content .input {
+    margin-bottom: 10px;
+    width: 400px; }
+    .modal .content .input .label {
+      padding-top: 0 !important;
+      width: 90px; }
+
+.task {
+  display: inline-block;
+  margin: 0 20px 0 0 !important;
+  width: 200px !important;
+  min-width: 200px;
+  min-width: 200px; }
+  .task .header {
+    position: relative;
+    padding: 5px 10px; }
+    .task .header .icon {
+      position: absolute;
+      top: 5px;
+      right: 5px; }
+      .task .header .icon:hover {
+        cursor: pointer; }
 
 #root {
   display: flex; }

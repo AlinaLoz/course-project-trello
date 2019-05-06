@@ -50,29 +50,57 @@ export const ACTIONS = {
 	},
 	TASK: {
 		GET: {
-			RQ: "GET_RQ",
-			SC: "GET_SC",
-			FL: "GET_FL"
+			RQ: "TASK_GET_RQ",
+			SC: "TASK_GET_SC",
+			FL: "TASK_GET_FL"
 		},
 		ADD: {
-			RQ: "ADD_RQ",
-			SC: "ADD_SC",
-			FL: "ADD_FL"
+			RQ: "TASK_ADD_RQ",
+			SC: "TASK_ADD_SC",
+			FL: "TASK_ADD_FL"
 		},
 		REMOVE: {
-			RQ: "REMOVE_RQ",
-			SC: "REMOVE_SC",
-			FL: "REMOVE_FL"
+			RQ: "TASK_REMOVE_RQ",
+			SC: "TASK_REMOVE_SC",
+			FL: "TASK_REMOVE_FL"
 		},
 		CHANGE: {
-			RQ: "CHANGE_RQ",
-			SC: "CHANGE_SC",
-			FL: "CHANGE_FL"
+			RQ: "TASK_CHANGE_RQ",
+			SC: "TASK_CHANGE_SC",
+			FL: "TASK_CHANGE_FL"
 		},
 		REMOVE_MESSAGE: {
-			RQ: "REMOVE_MESSAGE_RQ",
-			SC: "REMOVE_MESSAGE_SC",
-			FL: "REMOVE_MESSAGE_FL"
+			RQ: "TASK_REMOVE_MESSAGE_RQ",
+			SC: "TASK_REMOVE_MESSAGE_SC",
+			FL: "TASK_REMOVE_MESSAGE_FL"
+		}
+	},
+	BOARD: {
+		MESSAGE: "BOARD_MESSAGE",
+		GET_ALL: {
+			RQ: "BOARD_GET_RQ",
+			SC: "BOARD_GET_SC",
+			FL: "BOARD_GET_FL"
+		},
+		CREATE_LIST: {
+			RQ: "CREATE_LIST_RQ",
+			SC: "CREATE_LIST_SC",
+			FL: "CREATE_LIST_FL"
+		},
+		DROP_LIST: {
+			RQ: "DROP_LIST_RQ",
+			SC: "DROP_LIST_SC",
+			FL: "DROP_LIST_FL"
+		},
+		DROP : {
+			RQ: "BOARD_DROP_RQ",
+			SC: "BOARD_DROP_SC",
+			FL: "BOARD_DROP_FL"
+		},
+		CREATE: {
+			RQ: "BOARD_CREATE_RQ",
+			SC: "BOARD_CREATE_SC",
+			FL: "BOARD_CREATE_FL"
 		}
 	}
 };

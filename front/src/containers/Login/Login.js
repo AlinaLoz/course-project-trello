@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {Button, Input, Grid, Message, Icon} from "semantic-ui-react";
-import {fetchLogin} from "../redux/auth/actions";
+import {fetchLogin} from "../../redux/auth/actions";
 
 class Login extends Component {
 	state = {
@@ -36,7 +36,7 @@ class Login extends Component {
 		const {message} = this.props;
 
 		return (
-			<Grid className={'page-form auth'}>
+			<Grid className={'page-form user'}>
 				<Button className={'button-register'} onClick={() => this.props.history.push('/register')}>register</Button>
 				<div>
 					<Message hidden={!Object.keys(message).length || !message.negative} content={message.text}/>

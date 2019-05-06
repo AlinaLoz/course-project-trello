@@ -1,5 +1,5 @@
 import {ACTIONS} from "../constans";
-import {Xhr} from "../../helpers/Xhr";
+import {Xhr} from "../../services/Xhr";
 
 export const fetchLogin = (login, password) => dispatch => {
 	dispatch({type: ACTIONS.USER.LOGIN.RQ});

@@ -91,9 +91,9 @@ class Xhr {
 		return xhr.post(`${URL}/register`, {login, password, confirmPassword});
 	}
 
-	static getTasks(id) {
+	static getTasks(idList) {
 		const xhr = new Xhr();
-		return xhr.get(`${URL}/task-get`, {id});
+		return xhr.get(`${URL}/tasks`, {idList});
 	}
 
 	static removeTask(userId, taskId) {
@@ -151,14 +151,44 @@ class Xhr {
 		return xhr.get(`${URL}/boards`, {});
 	}
 
-	static createBoard(name, users) {
+	static getBoardById(id) {
 		const xhr = new Xhr();
-		return xhr.post(`${URL}/board/add`, {name, users});
+		return xhr.get(`${URL}/board/${id}`, {});
+	}
+
+	static createBoard(name, isTeamBoard, team) {
+		const xhr = new Xhr();
+		return xhr.post(`${URL}/board/add`, {name, isTeamBoard, team});
 	}
 
 	static dropBoard(id) {
 		const xhr = new Xhr();
 		return xhr.delete(`${URL}/board/drop`, {id});
+	}
+
+	static createList(idBoard, nameList) {
+		const xhr = new Xhr();
+		return xhr.post(`${URL}/list/add`, {idBoard, nameList});
+	}
+
+	static deleteList(id) {
+		const xhr = new Xhr();
+		return xhr.delete(`${URL}/list/delete`, {id});
+	}
+
+	static createTask(theme, text, idList) {
+		const xhr = new Xhr();
+		return xhr.post(`${URL}/task/add`, {theme, text, idList});
+	}
+
+	static updateTask(theme, text, id) {
+		const xhr = new Xhr();
+		return xhr.put(`${URL}/task-change/${id}`, {theme, text});
+	}
+
+	static deleteTask(id) {
+		const xhr = new Xhr();
+		return xhr.delete(`${URL}/task-delete/${id}`, {});
 	}
 }
 
