@@ -1,16 +1,21 @@
 .sidebar {
+  width: 300px;
   font-weight: 300;
   position: fixed !important;
   top: 0;
   left: 0; }
   .sidebar .item {
+    white-space: nowrap !important;
     padding-top: 0; }
+    .sidebar .item .icon {
+      position: relative;
+      top: 2px; }
   .sidebar i.icon.log.out {
     position: relative;
     left: 28px;
     top: 2px; }
-  .sidebar .segment {
-    padding: 0; }
+  .sidebar .ui.segment {
+    padding: 0 !important; }
   .sidebar a svg {
     width: 20px;
     height: 20px; }
@@ -36,12 +41,14 @@
       font-size: 26px; }
 
 .grid {
-  margin: 30px 0 30px 250px !important;
-  padding-bottom: 30px !important;
-  width: 800px !important;
+  max-height: 80vh;
+  overflow-y: scroll;
+  padding: 30px 0 30px 250px !important;
+  width: 100% !important;
   flex-direction: column !important;
-  height: 95vh;
   flex-wrap: nowrap !important; }
+  .grid > .ui.header {
+    margin-top: 0; }
   .grid.board-create .board-name {
     margin-bottom: 10px; }
   .grid.board-create .checkbox {
@@ -112,6 +119,8 @@
     right: 20px; }
   .grid.one-board .ui.styled.accordion {
     width: 100%; }
+    .grid.one-board .ui.styled.accordion .content {
+      padding-bottom: 88px !important; }
   .grid.one-board .one-board__list {
     padding-top: 20px;
     max-height: 320px;
@@ -168,6 +177,8 @@
   height: 22px !important;
   background: #f39393 !important; }
 .button-add {
+  position: absolute;
+  bottom: 40px;
   width: 105px !important;
   padding: 10px 5px !important;
   margin-top: 20px !important;
@@ -191,7 +202,7 @@
     margin-bottom: 10px;
     width: 400px; }
     .modal .content .input .label {
-      padding-top: 0 !important;
+      padding-top: 8px !important;
       width: 90px; }
 
 .task {
@@ -275,7 +286,7 @@ html, body {
       left: -10px; }
   .page-tasks__sidebar.sidebar {
     padding-right: 0;
-    width: 210px !important;
+    width: 240px !important;
     height: 100vh  !important;
     background: #1b1c1d; }
     .page-tasks__sidebar.sidebar .item {
@@ -303,6 +314,7 @@ html, body {
     right: 17px;
     top: 6px; }
   .content .header {
+    margin-top: 0 !important;
     font-size: 1.71428571rem !important;
     padding-top: 10px; }
   .content .button-add {

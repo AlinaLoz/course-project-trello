@@ -102,7 +102,7 @@ html, body {
 
   &__sidebar.sidebar {
     padding-right: 0;
-    width: 210px !important;
+    width: 240px !important;
     height: 100vh  !important;
     background: #1b1c1d;
 
@@ -147,6 +147,7 @@ html, body {
   }
 
   .header {
+    margin-top: 0 !important;
     font-size: 1.71428571rem !important;
     padding-top: 10px;
   }

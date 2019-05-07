@@ -28,7 +28,7 @@ export const createBoard = (name, isTeamBoard, team) => async dispatch => {
   }catch(e) {
     return dispatch({
       type: ACTIONS.BOARD.CREATE.FL,
-      data: e.message
+      data: e.messages
     });
   }
 };

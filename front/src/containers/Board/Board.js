@@ -13,9 +13,7 @@ class Board extends Component {
   componentWillMount() {
     const { board, match } = this.props;
     const { ongetBoardById } = this.props;
-    if (!board || !board.lists) {
-      ongetBoardById(match.params.id)
-    }
+    ongetBoardById(match.params.id)
   }
 
   render() {

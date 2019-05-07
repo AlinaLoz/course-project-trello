@@ -48,6 +48,13 @@ export const ACTIONS = {
 			FL: "USER_TEST_FL"
 		}
 	},
+	HISTORY: {
+		GET_ALL: {
+			RQ: "HISTORY_GET_RQ",
+			SC: "HISTORY_GET_SC",
+			FL: "HISTORY_GET_FL"
+		},
+	},
 	TASK: {
 		GET: {
 			RQ: "TASK_GET_RQ",

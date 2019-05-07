@@ -17,7 +17,8 @@
     "react-scripts": "1.0.11",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "semantic-ui-react": "^0.86.0"
+    "semantic-ui-react": "^0.86.0",
+    "socket.io-client": "^2.2.0"
   },
   "homepage": "./",
   "main": "main.js",
@@ -148,6 +149,7 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
+    "immutable": "^4.0.0-rc.12",
     "redux-devtools-extension": "^2.13.8",
     "semantic-ui-css": "^2.4.1"
   }

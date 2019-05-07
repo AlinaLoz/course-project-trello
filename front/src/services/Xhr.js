@@ -190,6 +190,11 @@ class Xhr {
 		const xhr = new Xhr();
 		return xhr.delete(`${URL}/task-delete/${id}`, {});
 	}
+
+	static getHistory() {
+		const xhr = new Xhr();
+		return xhr.delete(`${URL}/user-history`, {});
+	}
 }
 
 export {Xhr};

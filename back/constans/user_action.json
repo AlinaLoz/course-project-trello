@@ -1,0 +1,38 @@
+[
+  {
+    "number": 0,
+    "name": "create board"
+  },
+  {
+    "number": 1,
+    "name": "drop board"
+  },
+  {
+    "number": 2,
+    "name": "change board"
+  },
+  {
+    "number": 3,
+    "name": "create list"
+  },
+  {
+    "number": 4,
+    "name": "drop list"
+  },
+  {
+    "number": 5,
+    "name": "change list"
+  },
+  {
+    "number": 6,
+    "name": "create task"
+  },
+  {
+    "number": 7,
+    "name": "drop task"
+  },
+  {
+    "number": 8,
+    "name": "change task"
+  }
+]

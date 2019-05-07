@@ -1,5 +1,8 @@
 const Sequelize = require('sequelize');
 const conf = require('../config/db');
+const ACTIONS = require('../constans/user_action');
+const TypeActionModel = require('../models/mysql/type_action');
+const ActionModel = require('../models/mysql/action').Action;
 const UserModel = require('../models/mysql/user').User;
 const TeamModel = require('../models/mysql/team');
 const BoardModel = require('../models/mysql/board').Board;
@@ -15,6 +18,8 @@ const sequelize = new Sequelize(conf.database, conf.user, conf.password, {
 	}
 });
 
+const TypeAction = TypeActionModel(sequelize, Sequelize);
+const Action = ActionModel(sequelize, Sequelize);
 const User = UserModel(sequelize, Sequelize);
 const Team = TeamModel(sequelize, Sequelize);
 const Board = BoardModel(sequelize, Sequelize);
@@ -36,14 +41,29 @@ List.hasMany(Task);
 Task.belongsTo(List);
 
 sequelize.sync()
-	.then(() => {
-		console.log(`Database & tables created!`)
-});
+	.then(async () => {
+		console.log(`Database & tables created!`);
+
+		const listAction = ACTIONS.map(action => TypeAction.build({number: action.number, name: action.name}));
+		const createAction = Promise.all(listAction)
+			.then(async results => {
+				try {
+					for (const item of results) {
+						await item.save();
+					}
+				} catch (err) {
+					console.log(err);
+				}
+			});
+	});
 
 module.exports = {
+	TypeAction,
+	Action,
 	User,
 	Team,
 	Board,
-	List
+	List,
+	Task
 };
 

@@ -1,20 +1,28 @@
 .sidebar {
+  width: 300px;
   font-weight: 300;
   position: fixed !important;
   top: 0;
   left: 0;
 
   .item {
+    white-space: nowrap !important;
     padding-top: 0;
+
+    .icon {
+      position: relative;
+      top: 2px;
+    }
   }
+
 
   i.icon.log.out {
     position: relative;
     left: 28px;
     top: 2px;
   }
-  .segment{
-    padding: 0;
+  .ui.segment{
+    padding: 0 !important;
   }
 
   &  a {

@@ -52,7 +52,7 @@ exports.User = (sequelize, type) => {
 				const token = jwt.sign({id: user.id}, conf.token.secret, {expiresIn: conf.token.tokenLife});
 				const refreshToken = jwt.sign({id: user.id}, conf.token.refreshSecret, {expiresIn: conf.token.refreshTokenLife});
 
-				return resolve({auth: true, token: token, refreshToken: refreshToken});
+				return resolve({auth: true, token: token, id: user.id});
 			}
 			catch(err) {}
 		});

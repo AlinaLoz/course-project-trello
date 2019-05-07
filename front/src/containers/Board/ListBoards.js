@@ -34,8 +34,8 @@ class ListBoards extends Component{
                           </Button>
                       </List.Content>
                   </List.Item>)}
-                  <Button className={`button-add`} onClick={() => this.props.history.push('/board-create')}>Создать</Button>
               </List>
+              <Button className={`button-add`} onClick={() => this.props.history.push('/board-create')}>Создать</Button>
           </Grid>
         )
     }

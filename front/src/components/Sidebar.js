@@ -8,13 +8,8 @@ const NavbarComponent = ({history, onlogOut}) => {
 	return (
 		<Sidebar visible className={'page-tasks__sidebar navbar'}>
 			<Segment basic>
-				<Menu.Item as={'a'} onClick={() => history.push('/')}>
-					{/*<ReactSVG src={require('../assets/images/logo.svg')}/>*/}
-					<span>Tododer</span>
-				</Menu.Item>
-				<Menu.Item as={'a'} onClick={() => history.push('/profile')}>
-					<Icon name='user'/>
-					<span>Профиль</span>
+				<Menu.Item as={'a'} onClick={() => history.push('/about')}>
+					<span>LozitaTododer</span>
 					<Icon name={`log out`} onClick={() => onlogOut()}/>
 				</Menu.Item>
 				<Menu.Item as={'a'} onClick={() => history.push('/team')}>
@@ -24,6 +19,14 @@ const NavbarComponent = ({history, onlogOut}) => {
 				<Menu.Item as={'a'} onClick={() => history.push('/boards')}>
 					<Icon name='clipboard'/>
 					<span>Доски</span>
+				</Menu.Item>
+				<Menu.Item as={'a'} onClick={() => history.push('/history')}>
+					<Icon name='history'/>
+					<span>История событий</span>
+				</Menu.Item>
+				<Menu.Item as={'a'} onClick={() => history.push('/about')}>
+					<Icon name='question circle'/>
+					<span>О приложении</span>
 				</Menu.Item>
 			</Segment>
 		</Sidebar>

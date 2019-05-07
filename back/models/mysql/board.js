@@ -1,4 +1,8 @@
-const {User, Team} = require('../../lib/sequelize');
+const saveToHistory = async (instance, options, actionId) => {
+    const { id: userId } = options;
+    const { id: boardId } = instance;
+    global.appServises.historyEmmitter.eventEmitter.emit('user-history', {userId, boardId, actionId});
+};
 
 exports.Board = (sequelize, type) => {
     const Board = sequelize.define('board', {
@@ -15,32 +19,11 @@ exports.Board = (sequelize, type) => {
             type: type.BOOLEAN,
             allowNull: false,
         }
+    },{
+      hooks: {
+          afterSave: (instance, options) => saveToHistory(instance, options, 0),
+          afterUpdate: (instance, options) => saveToHistory(instance, options, 2),
+      }
     });
-
-    Board.create = async (id, isTeamBoard, name, team = null) => {
-        if (isTeamBoard) {
-            try {
-                const searchTeam = await Team.findById(parseInt(team));
-                if (!searchTeam) throw new Error('team is not exist');
-                return await searchTeam.createBoard({name, ownerIsTeam: isTeamBoard, userId: null, teamId: team})
-            } catch (err) {
-                throw err;
-            }
-        } else {
-            try {
-                const user = await Team.findById(parseInt(id));
-                if (!user) throw new Error('team is not exist');
-                const board = await user.getBoards().filter(board => board.name === name && !board.ownerIsTeam);
-                if (board.length) throw new Error('board with the same name is exist');
-                const newBoard = await user.createBoard({name, ownerIsTeam: isTeamBoard, userId: id, teamId: null});
-                const {updatedAt, createdAt, ...other} = newBoard.dataValues;
-                return other;
-            } catch (err) {
-                throw err;
-            }
-        }
-    };
-
-    Board.delete = () => {};
     return Board;
 };
