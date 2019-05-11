@@ -13,6 +13,7 @@ class Xhr {
 		optionsPost : {
 			mode     : 'cors',
 			method   : 'post',
+			credentials: "include",
 			headers  : {
 				"Content-Type" : "application/json; charset=UTF-8",
 			},
@@ -34,7 +35,6 @@ class Xhr {
 			},
 		}
 	};
-
 
 	get(url, params) {
 		const sendData = Object.keys(params).map(key => `${key}=${params[key]}`);
@@ -192,11 +192,6 @@ class Xhr {
 	static deleteTask(id) {
 		const xhr = new Xhr();
 		return xhr.delete(`${URL}/task-delete/${id}`, {});
-	}
-
-	static getHistory() {
-		const xhr = new Xhr();
-		return xhr.delete(`${URL}/user-history`, {});
 	}
 }
 

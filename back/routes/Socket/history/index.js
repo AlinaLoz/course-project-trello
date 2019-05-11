@@ -1,7 +1,8 @@
 const { Action, User, TypeAction, Board } = require('../../../lib/sequelize');
+const GLOBAL = require('../../../constans/global');
 
 module.exports = async (io, data, action) => {
-  const {id} = data;
+  const {id, numberPage} = data;
   try {
     const user = await User.findByPk(parseInt(id));
 
@@ -10,25 +11,27 @@ module.exports = async (io, data, action) => {
     let boards = await user.getBoards();
     const teams = await user.getTeams();
 
-
     for await (const team of teams) {
       const tboards = await team.getBoards();
       boards = [...boards, ...tboards];
     }
 
-    let history = [];
+    const arrIdsBoard = boards.map(b => b.id);
 
-    for await (const board of boards) {
-      console.log(board.id);
-      const tmp = await Action.findAll({where: {boardId: board.id}});
-      history = [...history, ...tmp];
-    }
+    const history =  await Action.findAndCountAll({
+      where: {
+        boardId: arrIdsBoard
+      },
+      limit: GLOBAL.LIMIT_RECORD_ON_PAGE,
+      offset: GLOBAL.LIMIT_RECORD_ON_PAGE * numberPage,
+      order: [
+        ['createdAt', 'DESC']
+      ]
+    });
 
     let result = [];
 
-    console.log(history.length);
-
-    for (const item of history) {
+    for (const item of history.rows) {
       const action = await TypeAction.findAll({where: {number : parseInt(item.actionId)}});
       const board = await Board.findByPk(parseInt(item.boardId));
       const user = await User.findByPk(parseInt(item.userId));
@@ -40,7 +43,7 @@ module.exports = async (io, data, action) => {
         time : item.createdAt
       })
     }
-    io.emit(action, {history: result});
+    io.emit(action, {history: result, countRecord: history.count});
 
   }catch(err) {
     io.emit(action, {errors: err.message});

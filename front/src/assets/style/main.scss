@@ -182,6 +182,12 @@ html, body {
   }
 }
 
+.render-pagination-panel {
+  position: fixed;
+  bottom: 50px;
+  left: 250px;
+}
+
 .task-add {
   position: absolute;
   right: 20px;

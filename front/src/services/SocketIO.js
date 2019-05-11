@@ -1,10 +1,11 @@
 import io from 'socket.io-client';
+import CookieParser from "./CookieService";
 const URL = 'localhost:8000';
 
 var socket = null;
 
 (function () {
-  socket = io.connect(URL, {query: `token=${localStorage.getItem('token')}&id=${localStorage.getItem('id')}`});
+  socket = io.connect(URL, {query: `token=${CookieParser.getCookie('token')}&id=${CookieParser.getCookie('id')}`});
 })();
 
 const disconnect = () => {
@@ -16,7 +17,7 @@ const disconnect = () => {
 const emit = (event, data) => {
   return new Promise((resolve, reject) => {
     if (!socket) return reject('socket has been disconnected');
-    socket.emit(event, {...data, id: localStorage.getItem('id'), token: localStorage.getItem('token')});
+    socket.emit(event, {...data, id: CookieParser.getCookie('id'), token: CookieParser.getCookie('token')});
   });
 };
 
