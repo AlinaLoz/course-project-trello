@@ -36,7 +36,7 @@ class Login extends Component {
 		const {message} = this.props;
 
 		return (
-			<Grid className={'page-form user'}>
+			<Grid className={'page-form page-form-login user'}>
 				<Button className={'button-register'} onClick={() => this.props.history.push('/register')}>register</Button>
 				<div>
 					<Message hidden={!Object.keys(message).length || !message.negative} content={message.text}/>

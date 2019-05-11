@@ -236,6 +236,9 @@ html, body {
   left: 0;
   width: 100%;
   background: url("../images/login_bg.png"); }
+  .page-form-login {
+    height: 100vh;
+    min-height: 100vh; }
   .page-form > div {
     width: 450px;
     position: absolute;

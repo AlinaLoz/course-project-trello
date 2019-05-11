@@ -5,6 +5,7 @@ class Xhr {
 		optionsGet  : {
 			mode   : 'cors',
 			method : 'get',
+			credentials: "include",
 			headers: {
 				"Content-Type" : "application/json; charset=UTF-8",
 			}
@@ -19,6 +20,7 @@ class Xhr {
 		optionsDelete  : {
 			mode   : 'cors',
 			method : 'delete',
+			credentials: "include",
 			headers  : {
 				"Content-Type" : "application/json; charset=UTF-8",
 			},
@@ -26,6 +28,7 @@ class Xhr {
 		optionsPut  : {
 			mode   : 'cors',
 			method : 'put',
+			credentials: "include",
 			headers  : {
 				"Content-Type" : "application/json; charset=UTF-8",
 			},
@@ -36,7 +39,7 @@ class Xhr {
 	get(url, params) {
 		const sendData = Object.keys(params).map(key => `${key}=${params[key]}`);
 
-		return fetch(`${url}?${sendData.join('&')}&token=${localStorage.getItem('token')}`, this.defaultData.optionsGet)
+		return fetch(`${url}?${sendData.join('&')}`, this.defaultData.optionsGet)
 			.then(response => {
 				if (response.status >= 200 && response.status < 300) {
 					return response.json();
@@ -46,7 +49,7 @@ class Xhr {
 	}
 
 	post(url, body) {
-		return fetch(`${url}?token=${localStorage.getItem('token')}`, {...this.defaultData.optionsPost, body: JSON.stringify(body)})
+		return fetch(url, {...this.defaultData.optionsPost, body: JSON.stringify(body)})
 			.then(response => {
 				if (response.status >= 200 && response.status < 300) {
 					return response.json();
@@ -57,7 +60,7 @@ class Xhr {
 	}
 
 	delete(url, body) {
-		return fetch(`${url}?token=${localStorage.getItem('token')}`, {...this.defaultData.optionsDelete, body: JSON.stringify(body)})
+		return fetch(url, {...this.defaultData.optionsDelete, body: JSON.stringify(body)})
 			.then(response => {
 				if (response.status >= 200 && response.status < 300) {
 					return response.json();
@@ -67,7 +70,7 @@ class Xhr {
 	}
 
 	put(url, body) {
-		return fetch(`${url}?token=${localStorage.getItem('token')}`, {...this.defaultData.optionsPut, body: JSON.stringify(body)})
+		return fetch(url, {...this.defaultData.optionsPut, body: JSON.stringify(body)})
 			.then(response => {
 				if (response.status >= 200 && response.status < 300) {
 					return response.json();

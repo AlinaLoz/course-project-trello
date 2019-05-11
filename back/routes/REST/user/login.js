@@ -4,8 +4,10 @@ const {ConfirmPasswordError, InteractionDBError, UserNotExistError} = require(".
 exports.get = async function (req, resp) {
   try {
     const {login, password} = req.query;
-    const user = await User.login(login, password);
-    resp.status(200).send(user);
+    const {auth, token, id} = await User.login(login, password);
+    resp.cookie('token', token);
+    resp.cookie('id', id);
+    resp.send(200, {auth: auth});
   } catch (err) {
     if (err instanceof UserNotExistError) {
       resp.status(400).send({data: {status: "error", message: err.message}});

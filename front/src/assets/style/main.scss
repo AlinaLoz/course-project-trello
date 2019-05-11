@@ -24,6 +24,11 @@ html, body {
   width   : 100%;
   background: url('../images/login_bg.png');
 
+  &-login {
+    height: 100vh;
+    min-height: 100vh;
+  }
+
   & > div {
     width: 450px;
     position: absolute;

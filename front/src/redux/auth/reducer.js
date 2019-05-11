@@ -14,10 +14,8 @@ export default function auth(state = initState, action) {
 			localStorage.removeItem('id');
 			return {...state, auth: false, token: ""};
 		case ACTIONS.USER.AUTH: {
-			const {auth, token, id} = action.data;
+			const {auth} = action.data;
 			localStorage.setItem('auth', auth);
-			localStorage.setItem('token', token);
-			localStorage.setItem('id', id);
 			return {...state, auth};
 		}
 		case ACTIONS.USER.LOGIN.RQ:
