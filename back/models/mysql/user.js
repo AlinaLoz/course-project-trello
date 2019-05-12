@@ -9,9 +9,12 @@ exports.User = (sequelize, type) => {
 			primaryKey: true,
 			autoIncrement: true
 		},
+		role: {
+			type: type.STRING,
+			default: 'user'
+		},
 		login: type.STRING,
 		password: type.STRING,
-		name: type.STRING
 	});
 
 	User.register = function(login, password, confirmPassword) {

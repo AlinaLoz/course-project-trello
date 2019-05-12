@@ -40,4 +40,36 @@ export const logOut = () => dispatch => {
 	});
 };
 
+export const getAllUsers = (pageNumber) => dispatch => {
+	dispatch({type: ACTIONS.USERS.GET_ALL.RQ});
+	Xhr.getUsers(pageNumber).then(resp => {
+		dispatch({
+			type: ACTIONS.USERS.GET_ALL.SC,
+			data: resp
+		})
+	}).catch(err => {
+		console.log(err);
+		dispatch({
+			type: ACTIONS.USERS.GET_ALL.FL,
+			data: err
+		})
+	});
+};
+
+export const deleteUser = (pageNumber, id) => dispatch => {
+	dispatch({type: ACTIONS.USERS.GET_ALL.RQ});
+	Xhr.deleteUser(id, pageNumber).then(resp => {
+		dispatch({
+			type: ACTIONS.USERS.GET_ALL.SC,
+			data: resp
+		})
+	}).catch(err => {
+		console.log(err);
+		dispatch({
+			type: ACTIONS.USERS.GET_ALL.FL,
+			data: err
+		})
+	});
+};
+
 

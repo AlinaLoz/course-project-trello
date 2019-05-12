@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {Accordion, Button, Grid, Header, Icon, Input, List, Message} from "semantic-ui-react";
 import {createList, dropList, dropMessage, getBoardById} from "../../redux/boards/actions";
-import BoardList from "../List/BoardList";
+import BoardList from "../ListBoard/BoardList";
 
 class Board extends Component {
   state = {

@@ -9,12 +9,17 @@ function subscribePagination(WrappedComponent) {
     };
 
     renderPaginationPanel = () => {
+      console.log(this.props.countRecord);
+      console.log(this.state.numberPage);
+
       return (
         <div className={'render-pagination-panel'}>
           {this.state.numberPage > 0 &&
-          <Button className="render-pagination-panel-left" onClick={() => this.changePage(-1)}>Назад</Button>}
-          {this.state.numberPage < parseInt(this.props.countRecord / GLOBAL.LIMIT_RECORD_ON_PAGE) - 1 &&
-            <Button className="render-pagination-panel-right" onClick={() => this.changePage(1)}>Вперёд</Button>}
+          <Button className="render-pagination-panel-left" onClick={() => this.changePage(-1)}>Назад</Button>
+          }
+          {this.state.numberPage < parseInt(this.props.countRecord / GLOBAL.LIMIT_RECORD_ON_PAGE)  &&
+            <Button className="render-pagination-panel-right" onClick={() => this.changePage(1)}>Вперёд</Button>
+          }
         </div>
       )
     };

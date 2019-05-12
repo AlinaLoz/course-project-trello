@@ -112,5 +112,17 @@ export const ACTIONS = {
 	},
 	LINK: {
 		SET_VALUE: 'SET_VALUE'
+	},
+	USERS: {
+		GET_ALL: {
+			RQ: "USERS_GET_ALL_GET_RQ",
+			SC: "USERS_GET_ALL_GET_SC",
+			FL: "USERS_GET_ALL_GET_FL"
+		},
+		DROP_USER: {
+			RQ: "DROP_USER_RQ",
+			SC: "DROP_USER_SC",
+			FL: "DROP_USER_FL"
+		}
 	}
 };

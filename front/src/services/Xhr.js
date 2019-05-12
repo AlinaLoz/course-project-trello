@@ -193,6 +193,16 @@ class Xhr {
 		const xhr = new Xhr();
 		return xhr.delete(`${URL}/task-delete/${id}`, {});
 	}
+
+	static getUsers(pageNumber) {
+		const xhr = new Xhr();
+		return xhr.get(`${URL}/get-all-users/${pageNumber}`, {});
+	}
+
+	static deleteUser(id, pageNumber) {
+		const xhr = new Xhr();
+		return xhr.delete(`${URL}/delete-user`, {id, pageNumber});
+	}
 }
 
 export {Xhr};

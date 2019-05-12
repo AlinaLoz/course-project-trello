@@ -9,6 +9,9 @@ const initState = {
   },
   listTeams: {
     numberPage: 0,
+  },
+  listUsers: {
+    numberPage: 0,
   }
 };
 
