@@ -38,7 +38,7 @@ class RoutePage extends React.Component {
 
 					<Route path={'/team/change'} component={TeamCreate}/>
 					<Route path={'/team/:id'} component={Team}/>
-					<Route path={'/team'} component={ListTeams} />
+					<Route path={'/teams'} component={ListTeams} />
 
 					<Route path={'/board/:id'} component={Board}/>
 					<Route path={'/boards'} component={ListBoards}/>

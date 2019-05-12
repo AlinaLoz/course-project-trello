@@ -34,6 +34,7 @@
     "express-cors": "0.0.3",
     "immutable": "^4.0.0-rc.12",
     "jsonwebtoken": "^8.4.0",
+    "lodash": "^4.17.11",
     "mysql": "^2.5.2",
     "mysql2": "^1.6.5",
     "redis": "^2.8.0",

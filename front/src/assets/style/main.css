@@ -63,56 +63,54 @@
     margin-top: 0 !important; }
   .grid .list {
     padding-bottom: 30px !important; }
-  .grid-change-team {
-    width: 600px !important; }
-    .grid-change-team .form {
-      width: 400px !important; }
-    .grid-change-team .input {
-      width: 400px;
-      display: block;
-      margin-bottom: 10px;
-      position: relative; }
-      .grid-change-team .input .label {
-        width: 200px;
-        background: none;
-        padding: 0;
-        margin-right: 40px; }
-      .grid-change-team .input input {
-        width: 160px !important;
-        padding: 5px !important;
-        height: 30px !important; }
-      .grid-change-team .input .input-bew-user-test {
-        color: darkcyan; }
-      .grid-change-team .input i.icon {
-        font-size: 16px;
-        position: absolute;
-        top: 5px;
-        right: -32px; }
-        .grid-change-team .input i.icon.warning:before {
-          color: red; }
-        .grid-change-team .input i.icon.check:before {
-          color: green; }
-        .grid-change-team .input i.icon:hover {
-          cursor: pointer; }
-    .grid-change-team .button-save {
-      margin-top: 30px !important;
-      background: navajowhite !important; }
-    .grid-change-team .members {
-      border: 0 !important;
-      box-shadow: none !important;
-      width: 400px;
-      padding: 0 !important; }
-      .grid-change-team .members .item {
-        padding: 10px !important;
-        border-bottom: 1px solid rgba(34, 36, 38, 0.15);
-        border-top: 1px solid rgba(34, 36, 38, 0.15); }
-        .grid-change-team .members .item .content {
-          position: relative;
-          left: 10px;
-          top: -2px;
-          padding: 0 !important;
-          display: inline-flex;
-          font-size: 14px !important; }
+  .grid-change-team .form {
+    width: 400px !important; }
+  .grid-change-team .input {
+    width: 400px;
+    display: block;
+    margin-bottom: 10px;
+    position: relative; }
+    .grid-change-team .input .label {
+      width: 200px;
+      background: none;
+      padding: 0;
+      margin-right: 40px; }
+    .grid-change-team .input input {
+      width: 160px !important;
+      padding: 5px !important;
+      height: 30px !important; }
+    .grid-change-team .input .input-bew-user-test {
+      color: darkcyan; }
+    .grid-change-team .input i.icon {
+      font-size: 16px;
+      position: absolute;
+      top: 5px;
+      right: -32px; }
+      .grid-change-team .input i.icon.warning:before {
+        color: red; }
+      .grid-change-team .input i.icon.check:before {
+        color: green; }
+      .grid-change-team .input i.icon:hover {
+        cursor: pointer; }
+  .grid-change-team .button-save {
+    margin-top: 30px !important;
+    background: navajowhite !important; }
+  .grid-change-team .members {
+    border: 0 !important;
+    box-shadow: none !important;
+    width: 400px;
+    padding: 0 !important; }
+    .grid-change-team .members .item {
+      padding: 10px !important;
+      border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+      border-top: 1px solid rgba(34, 36, 38, 0.15); }
+      .grid-change-team .members .item .content {
+        position: relative;
+        left: 10px;
+        top: -2px;
+        padding: 0 !important;
+        display: inline-flex;
+        font-size: 14px !important; }
   .grid .message {
     width: 400px !important;
     margin-left: 10px; }
@@ -335,8 +333,13 @@ html, body {
 
 .render-pagination-panel {
   position: fixed;
-  bottom: 50px;
-  left: 250px; }
+  bottom: 80px;
+  left: 250px;
+  width: 200px; }
+  .render-pagination-panel-left {
+    float: left; }
+  .render-pagination-panel-right {
+    float: right; }
 
 .task-add {
   position: absolute;

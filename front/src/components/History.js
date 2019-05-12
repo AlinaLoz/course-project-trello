@@ -3,8 +3,6 @@ import {Grid, Header, List} from "semantic-ui-react";
 import GLOBAL from '../constans/global';
 
 const History = ({userHistory, numberPage}) => {
-  console.log(userHistory, 'rererender');
-
   return (
     <Grid>
       <Header>История событий:</Header>

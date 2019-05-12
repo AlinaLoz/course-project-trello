@@ -11,18 +11,18 @@ export default function teams(state = initState, action) {
         case ACTIONS.BOARD.GET_ALL.RQ:
             return {...state, fetching: true};
         case ACTIONS.BOARD.GET_ALL.SC:{
-          let { boards } = state;
-          action.data.boards.forEach(b => {
-              const changeObj = boards.find(b2 => b2.id == b.id);
-              let indexObj = -1;
-              if (changeObj) {
-                  indexObj = boards.indexOf(changeObj);
-                  boards[indexObj] = b;
-              } else {
-                  boards.push(b);
-              }
-          });
-          return {...state, boards: [...boards], fetching: false, message: {negative: false}};
+          const { boards, countRecord } = action.data;
+          // action.data.boards.forEach(b => {
+          //     const changeObj = boards.find(b2 => b2.id == b.id);
+          //     let indexObj = -1;
+          //     if (changeObj) {
+          //         indexObj = boards.indexOf(changeObj);
+          //         boards[indexObj] = b;
+          //     } else {
+          //         boards.push(b);
+          //     }
+          // });
+          return {...state,  boards, countRecord, fetching: false, message: {negative: false}};
         }
         case ACTIONS.BOARD.GET_ALL.FL:
             return {...state, fetching: false, message: {info: action.data, negative: true}};
@@ -40,14 +40,17 @@ export default function teams(state = initState, action) {
             return {...state, message: {}};
         case ACTIONS.BOARD.DROP.RQ:
             return {...state, fetching: true};
-        case ACTIONS.BOARD.DROP.SC:
-            const {id} = action.data;
-            const {boards} = state;
-            const obj = boards.find(b => id == b.id);
-            if (boards.indexOf(obj) !== -1) {
-                boards.splice(boards.indexOf(obj), 1);
-            }
-            return {...state, ...action.data, boards: [...boards], fetching: false, message: {negative: false}};
+        case ACTIONS.BOARD.DROP.SC:{
+            const {boards, countRecord} = action.data;
+            // const {id} = action.data;
+            // const {boards} = state;
+            // const obj = boards.find(b => id == b.id);
+            // if (boards.indexOf(obj) !== -1) {
+            //     boards.splice(boards.indexOf(obj), 1);
+            // }
+            return {...state,countRecord, boards, fetching: false, message: {negative: false}};
+        }
+
         case ACTIONS.BOARD.DROP.FL:
             return {...state, fetching: false,  message: {info: action.data, negative: true}};
         case ACTIONS.BOARD.CREATE_LIST.SC: {

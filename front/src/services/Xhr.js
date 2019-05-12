@@ -114,9 +114,9 @@ class Xhr {
 		return xhr.put(`${URL}/task-change`, {taskId, value});
 	}
 
-	static getTeams() {
+	static getTeams(numberPage) {
 		const xhr = new Xhr();
-		return xhr.get(`${URL}/team`, {});
+		return xhr.get(`${URL}/teams/${numberPage}`, {});
 	}
 
 	static checkExistUser(login) {
@@ -129,9 +129,9 @@ class Xhr {
 		return xhr.post(`${URL}/team/add`, {name, users});
 	}
 
-	static dropTeam(id) {
+	static dropTeam(numberPage, id) {
 		const xhr = new Xhr();
-		return xhr.delete(`${URL}/team/drop`, {id});
+		return xhr.delete(`${URL}/team/drop`, {numberPage, id});
 	}
 
 	static logout() {
@@ -149,9 +149,9 @@ class Xhr {
 			return xhr.put(`${URL}/team/update`, {id, name});
 	}
 
-	static getBoards() {
+	static getBoards(numberPage) {
 		const xhr = new Xhr();
-		return xhr.get(`${URL}/boards`, {});
+		return xhr.get(`${URL}/boards/${numberPage}`, {});
 	}
 
 	static getBoardById(id) {

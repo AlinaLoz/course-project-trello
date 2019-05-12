@@ -1,13 +1,23 @@
 const {User, Team} = require('../../../lib/sequelize');
+const GLOBAL = require('../../../constans/global');
 
 exports.get = async function (req, resp) {
   try {
+    const {numberPage} = req.params;
     const user = await User.findByPk(parseInt(req.id));
-    const teams = await user.getTeams();
-    resp.status(200).send(teams.map(({ id, name }) => ({id, name})))
+    const teams = await user.getTeams({
+      where: {},
+      order: [
+        ['createdAt', 'DESC']
+      ]
+    });
+    const formatTeams = teams
+      .map(({ id, name }) => ({id, name}))
+      .splice(GLOBAL.LIMIT_RECORD_ON_PAGE * numberPage, GLOBAL.LIMIT_RECORD_ON_PAGE);
+    resp.status(200).send({teams: formatTeams, countRecord: teams.length});
   } catch (err) {
     console.log(err);
-    resp.status(401).end();
+    return resp.status(500).end({messages: err});
   }
 };
 
@@ -25,7 +35,7 @@ exports.getById = async function (req, resp) {
 
   } catch (err) {
     console.log(err);
-    resp.status(500).end();
+    return resp.status(500).end({messages: err});
   }
 };
 
@@ -48,11 +58,22 @@ exports.teamAdd = async function(req, resp) {
 
 exports.delete = async function (req, resp) {
   try {
-    const {id} = req.body;
-    const team = await Team.findByPk(id);
+    const {id: idTeam, numberPage} = req.body;
+    const team = await Team.findByPk(idTeam);
     if (!team) resp.status(400).send({message: "this team is not exist"});
     await team.destroy();
-    resp.status(200).send({id, message: "team has been droped"});
+
+    const user = await User.findByPk(parseInt(req.id));
+
+    const teams = await user.getTeams({
+      where: {},
+      limit: GLOBAL.LIMIT_RECORD_ON_PAGE,
+      offset: GLOBAL.LIMIT_RECORD_ON_PAGE * numberPage,
+      order: [
+        ['createdAt', 'DESC']
+      ]
+    });
+    resp.status(200).send({teams, message: "team has been droped"});
   } catch (err) {
     console.log(err);
     return resp.status(401).end({messages: err});

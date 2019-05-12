@@ -3,6 +3,7 @@ import register from "./register/reducer";
 import tasks from "./tasks/reducer";
 import teams from "./teams/reducer";
 import boards from "./boards/reducer";
+import linked from "./linked/reducer";
 import {combineReducers} from "redux";
 
 export default combineReducers({
@@ -11,4 +12,5 @@ export default combineReducers({
 	tasks,
 	teams,
 	boards,
+	linked
 });

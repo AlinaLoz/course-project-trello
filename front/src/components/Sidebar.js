@@ -12,7 +12,7 @@ const NavbarComponent = ({history, onlogOut}) => {
 					<span>LozitaTododer</span>
 					<Icon name={`log out`} onClick={() => onlogOut()}/>
 				</Menu.Item>
-				<Menu.Item as={'a'} onClick={() => history.push('/team')}>
+				<Menu.Item as={'a'} onClick={() => history.push('/teams')}>
 					<Icon name='group'/>
 					<span>Команды</span>
 				</Menu.Item>

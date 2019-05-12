@@ -1,11 +1,11 @@
 import {Xhr} from "../../services/Xhr";
 import {ACTIONS} from "../constans";
 
-export const getTeams = () => dispatch => {
+export const getTeams = (numberPage) => dispatch => {
     dispatch({type: ACTIONS.TEAM.GET.RQ});
-    Xhr.getTeams().then(resp => {
+    Xhr.getTeams(numberPage).then(resp => {
         dispatch({
-            type:ACTIONS.TEAM.GET.SC,
+            type: ACTIONS.TEAM.GET.SC,
             data: resp
         })
     }).catch(err => {
@@ -47,10 +47,10 @@ export const createTeam = (name, users) => dispatch => {
     });
 };
 
-export const dropTeam = (id) => dispatch => {
+export const dropTeam = (numberPage, id) => dispatch => {
     dispatch({type: ACTIONS.TEAM.DROP.RQ});
 
-    Xhr.dropTeam(id).then(resp => {
+    Xhr.dropTeam(numberPage, id).then(resp => {
         dispatch({
             type: ACTIONS.TEAM.DROP.SC,
             data: resp

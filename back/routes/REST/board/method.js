@@ -1,16 +1,22 @@
 const {User, Team, Board} = require('../../../lib/sequelize');
+const _ = require('lodash');
+const GLOBAL = require('../../../constans/global');
 
 exports.getBoards = async function (req, resp) {
     try {
+        const {numberPage} = req.params;
         const user = await User.findByPk(parseInt(req.id));
         if (!user) throw new Error('user is not exist');
         let boards = await user.getBoards();
         const teams = await user.getTeams();
+
         for await (const team of teams) {
             const tboards = await team.getBoards();
             boards = [...boards, ...tboards];
         }
-        resp.send(200, {boards})
+        const sortBoards = _.sortBy(boards, () => boards.createdAt).reverse();
+        const spliceArray = sortBoards.splice(numberPage * GLOBAL.LIMIT_RECORD_ON_PAGE, GLOBAL.LIMIT_RECORD_ON_PAGE);
+        resp.send(200, {boards: spliceArray, countRecord: boards.length})
     }catch(err) {
         console.log(err);
         return resp.status(500).end({messages: err});
@@ -71,11 +77,23 @@ exports.createBoard = async (req, resp) => {
 
 exports.delete = async (req, resp) => {
     try {
-        const { id } = req.body;
+        const { id, numberPage } = req.body;
         const board = await Board.findById(parseInt(id));
         if (!board) throw new Error('board is not exist');
         await board.destroy({id: req.id});
-        resp.send({message: 'board has been destoyed', id});
+
+        const user = await User.findByPk(parseInt(req.id));
+        let boards = await user.getBoards();
+        const teams = await user.getTeams();
+
+        for await (const team of teams) {
+            const tboards = await team.getBoards();
+            boards = [...boards, ...tboards];
+        }
+
+        const sortBoards = _.sortBy(boards, () => boards.createdAt).reverse();
+        const spliceArray = sortBoards.splice(numberPage * GLOBAL.LIMIT_RECORD_ON_PAGE, GLOBAL.LIMIT_RECORD_ON_PAGE);
+        resp.send({message: 'board has been destoyed', boards: spliceArray, countRecord: boards.length});
     } catch(err) {
         console.log(err);
         return resp.status(500).end({messages: err});

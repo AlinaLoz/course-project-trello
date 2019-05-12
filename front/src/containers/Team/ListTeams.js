@@ -1,60 +1,50 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {Button, Grid, Header, Icon, Image, List, Message} from "semantic-ui-react";
 import {dropMessage, dropTeam, getTeams} from "../../redux/teams/actions";
+import {setValue} from "../../redux/linked/actions";
+import subscribePagination from "../../hoc/subscribePagination";
+import {ListTeamsComponent} from "../../components/ListTeams";
+import {withRouter} from "react-router-dom";
 
-class ListTeams extends Component{
-    componentWillMount() {
-        const {ongetTeams} = this.props;
-        ongetTeams();
+const SubscListTeams  = subscribePagination(ListTeamsComponent);
+
+class ListTeamsContainer extends Component{
+  state = {
+    countRecord: 0,
+    typeComponent: 'listTeams'
+  };
+
+  componentWillMount() {
+    const {ongetTeams, numberPage, setValue} = this.props;
+    setValue(this.state.typeComponent, 'numberPage', 0);
+    ongetTeams(numberPage);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.teams !== this.props.teams) {
+      this.setState({countRecord: nextProps.teams.length});
     }
-
-    componentWillReceiveProps(nextProps, nextContext) {
-        const {message} = nextProps;
-        if (message !== this.props.message) {
-
-        }
+    if (nextProps.numberPage !== this.props.numberPage) {
+      this.props.ongetTeams(nextProps.numberPage);
     }
+  }
 
-    render(){
-        const {teams,message} = this.props;
-        const {ondropTeam, ondropMessage} = this.props;
-
-        return (
-            <Grid>
-                <Message hidden={!Object.keys(message).length} onDismiss={ondropMessage}>
-                    <Message.Header>{message.info}</Message.Header>
-                </Message>
-                <Header>Команды</Header>
-                <List celled className={"list-teams"}>
-                    {teams.map((team, index) => <List.Item key={`item-${index}`}>
-                        <Image avatar src='https://react.semantic-ui.com/images/avatar/small/helen.jpg' />
-                        <List.Content>
-                            <List.Header>{team.name}</List.Header>
-                        </List.Content>
-                        <List.Content className={`content-button`}>
-                            <Button className={`button-show-team`} onClick={() => this.props.history.push(`/team/${team.id}`)}>Показать</Button>
-                            <Button className={`button-drop-team`} onClick={() => ondropTeam(team.id)}>
-                                <Icon name="close"/>
-                            </Button>
-                        </List.Content>
-                    </List.Item>)}
-                    <Button className={`button-add`} onClick={() => this.props.history.push('/team/change')}>Создать</Button>
-                </List>
-            </Grid>
-        )
-    }
+  render() {
+    return <SubscListTeams {...this.state} {...this.props}/>;
+  }
 }
-
 
 export default connect(
     state => ({
         teams  : state.teams.teams,
-        message: state.teams.messageOfDrop
+        countRecord: state.teams.countRecord,
+        message: state.teams.messageOfDrop,
+        numberPage: state.linked.listTeams.numberPage
     }),
     dispatch => ({
-        ongetTeams: () => dispatch(getTeams()),
-        ondropTeam: (id) => dispatch(dropTeam(id)),
-        ondropMessage: () => dispatch(dropMessage())
+        ongetTeams: (numberPage) => dispatch(getTeams(numberPage)),
+        ondropTeam: (numberPage, id) => dispatch(dropTeam(numberPage, id)),
+        ondropMessage: () => dispatch(dropMessage()),
+        setValue: (component, field, value) => dispatch(setValue(component, field, value))
     })
-)(ListTeams);
+)(withRouter(ListTeamsContainer));

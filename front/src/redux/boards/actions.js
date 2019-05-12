@@ -1,10 +1,10 @@
 import {ACTIONS} from "../constans";
 import {Xhr} from "../../services/Xhr";
 
-export const getBoards = () => async dispatch => {
+export const getBoards = (numberPage) => async dispatch => {
   try {
     dispatch({type: ACTIONS.BOARD.GET_ALL.RQ});
-    const data = await Xhr.getBoards();
+    const data = await Xhr.getBoards(numberPage);
     dispatch({
       type: ACTIONS.BOARD.GET_ALL.SC,
       data

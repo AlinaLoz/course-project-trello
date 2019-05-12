@@ -20,11 +20,10 @@ export default function teams(state = initState, action) {
             return {...state, userTest: false, fetchingUserTest: false};
 
         case ACTIONS.TEAM.GET.SC:
-            return {...state, teams: [...action.data]};
-
+            return {...state, ...action.data};
         case ACTIONS.TEAM.DROP.SC:
-            const {id, message} = action.data;
-            const teams = state.teams.filter(team => team.id != id);
+            const {message, teams} = action.data;
+            // const teams = state.teams.filter(team => team.id != id);
             return {...state, teams, messageOfDrop: {positive: true, info: message}};
         case ACTIONS.TEAM.DROP.FL:
             return {...state, messageOfDrop: {positive: false, info: action.data.message}};

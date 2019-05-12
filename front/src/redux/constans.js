@@ -109,5 +109,8 @@ export const ACTIONS = {
 			SC: "BOARD_CREATE_SC",
 			FL: "BOARD_CREATE_FL"
 		}
+	},
+	LINK: {
+		SET_VALUE: 'SET_VALUE'
 	}
 };

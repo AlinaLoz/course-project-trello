@@ -184,8 +184,17 @@ html, body {
 
 .render-pagination-panel {
   position: fixed;
-  bottom: 50px;
+  bottom: 80px;
   left: 250px;
+  width: 200px;
+
+  &-left {
+    float: left;
+  }
+
+  &-right{
+    float: right;
+  }
 }
 
 .task-add {
