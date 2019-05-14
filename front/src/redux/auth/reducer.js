@@ -14,9 +14,9 @@ const initState = {
 export default function auth(state = initState, action) {
 	switch (action.type) {
 		case ACTIONS.USER.LOGOUT:
+			document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
 			localStorage.setItem('auth', "false");
-			localStorage.removeItem('token');
-			localStorage.removeItem('id');
+			window.location.reload();
 			return {...state, auth: false, token: ""};
 		case ACTIONS.USER.AUTH: {
 			const {auth, name, role, login} = action.data;
@@ -26,11 +26,12 @@ export default function auth(state = initState, action) {
 		case ACTIONS.USER.LOGIN.RQ:
 			return {...state};
 		case ACTIONS.USER.LOGIN.SC: {
-			const {token, auth, id} = action.data;
+			const {token, auth, id, name, role, login} = action.data;
 			localStorage.setItem('token', token);
 			localStorage.setItem('auth', auth);
 			localStorage.setItem('id', id);
-			return {...state, token, auth, message : {negative: false}};
+			console.log(name, role, login);
+			return {...state, token, auth, message : {negative: false}, name, role, login};
 		}
 		case ACTIONS.USER.LOGIN.FL:
 			const {data} = action;

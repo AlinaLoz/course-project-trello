@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fa7cc30-9f76-422d-ab2e-71e27824a608" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/back/routes/REST/user/admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/components/ListUsers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/containers/ListUsers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/containers/Sidebar/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/models/mysql/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/models/mysql/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/routes/REST/user/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/REST/user/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/routes/REST/user/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/REST/user/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/Route.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/style/.sass-cache/9a19926f19d3ac4976f4ff9aa27ca0e61c2b012c/sidebar.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/style/.sass-cache/9a19926f19d3ac4976f4ff9aa27ca0e61c2b012c/sidebar.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/style/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/style/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/style/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/style/sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/style/sidebar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/containers/Board/Board.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/containers/Board/Board.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/containers/List/BoardList.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/containers/ListBoard/BoardList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/hoc/subscribePagination/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/hoc/subscribePagination/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/redux/auth/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/redux/auth/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/routes/REST/user/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/REST/user/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/redux/auth/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/redux/auth/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/redux/constans.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/redux/constans.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/redux/linked/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/redux/linked/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/services/Xhr.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/Xhr.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,47 +17,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.29881924">
+    <splitter split-orientation="horizontal" split-proportion="0.5893186">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/src/containers/Board/ListBoards.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="31" column="11" selection-start-line="31" selection-end-line="47" selection-end-column="37" />
-                  <folding>
-                    <element signature="e#0#39#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/src/components/ListUsers.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="147">
-                  <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/front/src/containers/ListUsers/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="816">
+                <state relative-caret-position="714">
                   <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/back/routes/REST/team/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
@@ -84,16 +33,52 @@
             <entry file="file://$PROJECT_DIR$/back/routes/REST/user/index.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="102">
-                  <caret line="6" column="75" lean-forward="true" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
+                  <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/back/routes/REST/user/admin.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="247">
-                  <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+                <state relative-caret-position="850">
+                  <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/front/src/containers/Team/ListTeams.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="323">
+                  <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#0#39#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/front/src/containers/History/History.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="34">
+                  <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+                  <folding>
+                    <element signature="e#0#47#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/front/src/hoc/subscribeHistoryBySocket/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1088">
+                  <caret line="69" column="2" lean-forward="true" selection-start-line="57" selection-start-column="1" selection-end-line="69" selection-end-column="2" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -101,43 +86,26 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/front/src/redux/auth/actions.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="244">
-                  <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
+                <state relative-caret-position="255">
+                  <caret line="30" selection-start-line="30" selection-end-line="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/back/routes/REST/user/login.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="102">
+                  <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/src/redux/constans.js">
+            <entry file="file://$PROJECT_DIR$/back/lib/sequelize.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="127" column="2" selection-start-line="127" selection-start-column="2" selection-end-line="127" selection-end-column="2" />
-                  <folding>
-                    <element signature="n#!!block;n#USER#0;n#!!block;n#ACTIONS#0;n#!!top" />
-                    <element signature="n#!!block;n#LOGIN#0;n#!!block;n#USER#0;n#!!block;n#ACTIONS#0;n#!!top" />
-                    <element signature="n#!!block;n#REGISTER#0;n#!!block;n#USER#0;n#!!block;n#ACTIONS#0;n#!!top" />
-                    <element signature="n#!!block;n#ONE_TEAM#0;n#!!block;n#ACTIONS#0;n#!!top" />
-                    <element signature="n#!!block;n#TEAM#0;n#!!block;n#ACTIONS#0;n#!!top" />
-                    <element signature="n#!!block;n#HISTORY#0;n#!!block;n#ACTIONS#0;n#!!top" />
-                    <element signature="n#!!block;n#TASK#0;n#!!block;n#ACTIONS#0;n#!!top" />
-                    <element signature="n#!!block;n#BOARD#0;n#!!block;n#ACTIONS#0;n#!!top" />
-                    <element signature="n#!!block;n#LINK#0;n#!!block;n#ACTIONS#0;n#!!top" />
-                    <element signature="n#!!block;n#USERS#0;n#!!block;n#ACTIONS#0;n#!!top" />
-                    <element signature="n#!!block;n#GET_ALL#0;n#!!block;n#USERS#0;n#!!block;n#ACTIONS#0;n#!!top" />
-                    <element signature="n#!!block;n#DROP_USER#0;n#!!block;n#USERS#0;n#!!block;n#ACTIONS#0;n#!!top" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/src/Route.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="343">
-                  <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="27">
+                  <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
                 </state>
               </provider>
             </entry>
@@ -156,70 +124,73 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/src/components/ListUsers.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="298">
-                  <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/back/routes/REST/board/method.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="286">
-                  <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/back/routes/REST/team/method.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="227">
-                  <caret line="81" selection-start-line="81" selection-end-line="81" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/back/routes/REST/user/admin.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="312">
-                  <caret line="27" column="42" selection-start-line="1" selection-end-line="1" selection-end-column="51" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/front/src/redux/auth/reducer.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="329">
-                  <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/src/containers/ListUsers/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="42" column="48" lean-forward="true" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="221">
+                  <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/back/models/mysql/user.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="99">
+                  <caret line="54" column="100" selection-start-line="54" selection-start-column="100" selection-end-line="54" selection-end-column="100" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/front/src/redux/auth/actions.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="245">
-                  <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+                <state relative-caret-position="61">
+                  <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/front/src/containers/History/History.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+                  <folding>
+                    <element signature="e#0#47#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/front/src/components/Sidebar.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="153">
+                  <caret line="10" column="56" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="56" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/front/src/containers/Sidebar/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#0#36#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/front/src/hoc/subscribePagination/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="595">
+                  <caret line="37" column="75" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="75" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -227,7 +198,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/front/src/services/Xhr.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
+                <state relative-caret-position="3417">
                   <caret line="201" column="9" selection-start-line="201" selection-start-column="9" selection-end-line="201" selection-end-column="9" />
                 </state>
               </provider>
@@ -245,8 +216,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/back/routes/REST/user/auth.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+                <state relative-caret-position="102">
+                  <caret line="6" column="62" lean-forward="true" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="79" />
                 </state>
               </provider>
             </entry>
@@ -267,7 +238,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>socket</find>
       <find>herrere</find>
       <find>alert</find>
       <find>create</find>
@@ -297,6 +267,7 @@
       <find>ACTIONS.BOARD.DROP.SC</find>
       <find>Navbar</find>
       <find>pageNu</find>
+      <find>LOG</find>
     </findStrings>
     <replaceStrings>
       <replace>semantic-ui-react</replace>
@@ -315,7 +286,6 @@
         <option value="$PROJECT_DIR$/front/src/assets/style/modal.scss" />
         <option value="$PROJECT_DIR$/front/src/containers/Login/Login.js" />
         <option value="$PROJECT_DIR$/back/server.js" />
-        <option value="$PROJECT_DIR$/back/routes/REST/user/login.js" />
         <option value="$PROJECT_DIR$/front/src/services/CookieService.js" />
         <option value="$PROJECT_DIR$/front/src/services/SocketIO.js" />
         <option value="$PROJECT_DIR$/front/src/assets/style/list.scss" />
@@ -344,9 +314,7 @@
         <option value="$PROJECT_DIR$/front/src/containers/Team/ListTeams.js" />
         <option value="$PROJECT_DIR$/back/models/mysql/list.js" />
         <option value="$PROJECT_DIR$/front/src/containers/Sidebar/index.js" />
-        <option value="$PROJECT_DIR$/back/models/mysql/user.js" />
         <option value="$PROJECT_DIR$/back/middleware/tokenChecker.js" />
-        <option value="$PROJECT_DIR$/back/routes/REST/user/auth.js" />
         <option value="$PROJECT_DIR$/front/src/components/Sidebar.js" />
         <option value="$PROJECT_DIR$/front/src/assets/style/sidebar.scss" />
         <option value="$PROJECT_DIR$/front/src/redux/admin.js" />
@@ -358,9 +326,12 @@
         <option value="$PROJECT_DIR$/front/src/hoc/subscribePagination/index.js" />
         <option value="$PROJECT_DIR$/front/src/components/ListUsers.js" />
         <option value="$PROJECT_DIR$/front/src/services/Xhr.js" />
-        <option value="$PROJECT_DIR$/front/src/redux/auth/reducer.js" />
         <option value="$PROJECT_DIR$/front/src/redux/auth/actions.js" />
         <option value="$PROJECT_DIR$/back/routes/REST/user/admin.js" />
+        <option value="$PROJECT_DIR$/back/routes/REST/user/auth.js" />
+        <option value="$PROJECT_DIR$/front/src/redux/auth/reducer.js" />
+        <option value="$PROJECT_DIR$/back/routes/REST/user/login.js" />
+        <option value="$PROJECT_DIR$/back/models/mysql/user.js" />
       </list>
     </option>
   </component>
@@ -387,6 +358,12 @@
               <item name="course-project-trello" type="b2602c69:ProjectViewProjectNode" />
               <item name="course-project-trello" type="462c0819:PsiDirectoryNode" />
               <item name="back" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="course-project-trello" type="b2602c69:ProjectViewProjectNode" />
+              <item name="course-project-trello" type="462c0819:PsiDirectoryNode" />
+              <item name="back" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="course-project-trello" type="b2602c69:ProjectViewProjectNode" />
@@ -420,21 +397,6 @@
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="course-project-trello" type="b2602c69:ProjectViewProjectNode" />
-              <item name="course-project-trello" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="course-project-trello" type="b2602c69:ProjectViewProjectNode" />
-              <item name="course-project-trello" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -452,18 +414,18 @@
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lozita\Desktop\course-project-trello\front\src\constans" />
+      <recent name="C:\Users\lozita\Desktop\course-project-trello\back" />
+      <recent name="C:\Users\lozita\Desktop\course-project-trello\front\src\assets" />
+      <recent name="C:\Users\lozita\Desktop\course-project-trello\front\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lozita\Desktop\course-project-trello\front\src\hoc\subscribePagination" />
       <recent name="C:\Users\lozita\Desktop\course-project-trello\back\routes\REST" />
       <recent name="C:\Users\lozita\Desktop\course-project-trello\front\src\components" />
       <recent name="C:\Users\lozita\Desktop\course-project-trello\back\routes\auth" />
       <recent name="C:\Users\lozita\Desktop\course-project-trello\back\routes\team" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\lozita\Desktop\course-project-trello\front\src\constans" />
-      <recent name="C:\Users\lozita\Desktop\course-project-trello\back" />
-      <recent name="C:\Users\lozita\Desktop\course-project-trello\front\src\assets" />
-      <recent name="C:\Users\lozita\Desktop\course-project-trello\front\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -544,24 +506,25 @@
       <workItem from="1557185203592" duration="3483000" />
       <workItem from="1557212449586" duration="35313000" />
       <workItem from="1557517274100" duration="2585000" />
-      <workItem from="1557565102565" duration="58979000" />
+      <workItem from="1557565102565" duration="59614000" />
+      <workItem from="1557733081950" duration="459000" />
+      <workItem from="1557768677616" duration="2133000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164497000" />
+    <option name="totallyTimeSpent" value="167724000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18080357" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19196428" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49702382" weight="0.40589198" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.90625" visible="true" weight="0.14402619" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.9047619" weight="0.59574467" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.6532738" weight="0.4811784" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -569,8 +532,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="GraphQL" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.09375" side_tool="true" visible="true" weight="0.14402619" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.75074404" weight="0.2536825" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.0952381" side_tool="true" visible="true" weight="0.59574467" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.74776787" weight="0.60229135" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -589,32 +552,22 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/back/middleware/tokenChecker.js</url>
           <line>4</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/front/src/redux/constans.js</url>
           <line>4</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/front/src/components/ListBoard.js</url>
           <line>22</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/back/models/mysql/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/constans/global.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -636,9 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/hoc/subscribePagination/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/redux/linked/actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -650,16 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/hoc/subscribeHistoryBySocket/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="59" column="10" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -732,16 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/containers/Team/ListTeams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/services/CookieService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -783,13 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back/models/mysql/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/back/middleware/tokenChecker.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -797,27 +720,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/containers/Sidebar/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/assets/style/sidebar.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/Sidebar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -838,29 +744,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/containers/History/History.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="70" selection-start-line="2" selection-end-line="2" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/containers/Board/ListBoards.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="31" column="11" selection-start-line="31" selection-end-line="47" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/redux/admin.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/redux/admin.js" />
     <entry file="file://$PROJECT_DIR$/front/src/redux/linked/reducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -868,17 +752,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back/routes/REST/user/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/back/routes/REST/list/method.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/containers/Board/ListBoards.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="31" column="11" selection-start-line="31" selection-end-line="47" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/routes/REST/team/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -905,7 +799,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/front/src/Route.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
+        <state relative-caret-position="510">
           <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -913,17 +807,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back/routes/REST/team/index.js">
+    <entry file="file://$PROJECT_DIR$/back/routes/REST/board/method.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        <state relative-caret-position="714">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/hoc/subscribePagination/index.js">
+    <entry file="file://$PROJECT_DIR$/front/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/ListUsers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+        <state relative-caret-position="153">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/containers/Team/ListTeams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/hoc/subscribeHistoryBySocket/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="69" column="2" lean-forward="true" selection-start-line="57" selection-start-column="1" selection-end-line="69" selection-end-column="2" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -932,42 +849,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/back/routes/REST/team/method.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
+        <state relative-caret-position="1377">
           <caret line="81" selection-start-line="81" selection-end-line="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back/routes/REST/board/method.js">
+    <entry file="file://$PROJECT_DIR$/back/routes/REST/user/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        <state relative-caret-position="850">
+          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/src/containers/ListUsers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="42" column="48" lean-forward="true" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
+        <state relative-caret-position="714">
+          <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/hoc/subscribePagination/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="37" column="75" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="75" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/ListUsers.js">
+    <entry file="file://$PROJECT_DIR$/front/src/services/Xhr.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/routes/REST/user/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        <state relative-caret-position="3417">
+          <caret line="201" column="9" selection-start-line="201" selection-start-column="9" selection-end-line="201" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -978,31 +892,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/containers/History/History.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/Sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/containers/Sidebar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/routes/REST/user/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="62" lean-forward="true" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/redux/auth/reducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+        <state relative-caret-position="221">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/services/Xhr.js">
+    <entry file="file://$PROJECT_DIR$/back/lib/sequelize.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="201" column="9" selection-start-line="201" selection-start-column="9" selection-end-line="201" selection-end-column="9" />
+        <state relative-caret-position="27">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back/routes/REST/user/admin.js">
+    <entry file="file://$PROJECT_DIR$/back/routes/REST/user/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="27" column="42" selection-start-line="1" selection-end-line="1" selection-end-column="51" />
+        <state relative-caret-position="102">
+          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/src/redux/auth/actions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+        <state relative-caret-position="61">
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/models/mysql/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="54" column="100" selection-start-line="54" selection-start-column="100" selection-end-line="54" selection-end-column="100" />
         </state>
       </provider>
     </entry>

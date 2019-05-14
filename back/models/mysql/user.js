@@ -53,9 +53,7 @@ exports.User = (sequelize, type) => {
 				if (!passwordIsValid) return reject(new ConfirmPasswordError("password is wrong"));
 
 				const token = jwt.sign({id: user.id}, conf.token.secret, {expiresIn: conf.token.tokenLife});
-				const refreshToken = jwt.sign({id: user.id}, conf.token.refreshSecret, {expiresIn: conf.token.refreshTokenLife});
-
-				return resolve({auth: true, token: token, id: user.id});
+				return resolve({auth: true, token: token, id: user.id, login: user.login, role: user.role});
 			}
 			catch(err) {}
 		});
